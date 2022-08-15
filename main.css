@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    counter-reset: item-counter;
+}
+.alpha{
+    counter-increment: item-counter;
+    position: relative;
+}
+
+.alpha::before{
+    content: counter(item-counter, lower-alpha) ")";
+    position: absolute;
+    right:12px;
+}
+input{
+    margin-left:8px
+}
+label{
+    margin-left:8px
+}
+
+.score{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
